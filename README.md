@@ -26,19 +26,7 @@ GitHub Actions builds the Docker image, pushes the versioned image to Amazon ECR
 
 ## Architecture
 
-GitHub
-↓
-GitHub Actions CI/CD
-↓
-Docker Build
-↓
-Amazon ECR
-↓
-Amazon ECS Fargate
-↓
-Application Load Balancer
-↓
-CloudOps Status Dashboard
+GitHub Actions builds the Docker image from the GitHub repository and pushes it to Amazon ECR. Amazon ECS Fargate runs the CloudOps Status Dashboard behind an Application Load Balancer.
 
 Infrastructure is provisioned and managed using Terraform.
 
